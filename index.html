@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Takumi's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="css/6-3-1.css">
+  <script> GethashID (hashIDName){
+    if(hashIDName){
+      $('.tab li').find('a').each(function() { 
+        var idName = $(this).attr('href');
+        if(idName == hashIDName)
+          var parentElm = $(this).parent(); 
+          $('.tab li').removeClass("active");
+          $(parentElm).addClass("active"); 
+          $(".area").removeClass("is-active"); 
+          $(hashIDName).addClass("is-active"); 
+        }
+      });
+    }
+  }
+  
+  $('.tab a').on('click', function() {
+    var idName = $(this).attr('href'); 
+    GethashID (idName);
+    return false;
+  });
+  
+  
+  $(window).on('load', function () {
+      $('.tab li:first-of-type').addClass("active");
+      $('.area:first-of-type').addClass("is-active");
+    var hashName = location.hash; 
+    GethashID (hashName);
+  });</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <h1>Takumi's<br>Portfolio</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="#About">About</a>
+        </li>
+        <li>
+          <a href="#Works">Works</a>
+        </li>
+        <li>
+          <a href="#Skill">Skill</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="video-area">
+      <video id="video" poster="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/img/movie.jpg"
+        webkit-playsinline playsinline muted autoplay loop>
+        <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.mp4"
+          type="video/mp4">
+        <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.ogv"
+          type="video/ogv">
+        <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.webm"
+          type="video/webm">
+        <p></p>
+      </video>
+      <!--/video-area-->
+    </div>
+  </header>
+  <main>
+    <section id="About" class="About">
+      <h2 id="#About">ABOUT</h2>
+      <img src="IMG_8459_Original_Original.jpg" width="250" height="187">
+      <div class="about-text">
+        <p>1999年5月31日</p>
+        <p>WEBデザイナーを目指して転職活動している江連卓己です。</p>
+        <p>2021年にアメリカのカレッジを卒業して、沖縄の営業会社に就職。2022年3月にメキシコの日本レストランに就職。</p>
+        <p>「自分で何か1から作れる仕事したい」と思い、2023年10月に前会社を退職し、HTML/CSS,JavaScript,PhotoShop,illustratorなどを本格的に学習開始。</p>
+      </div>
+    </section>
+    <section id="Works" class="works">
+      <h2>Works</h2>
+      <div class="wrapper">
+        <ul class="tab">
+          <li><a href="#lunch">LPページ</a></li>
+          <li><a href="#drink">ECページ</a></li>
+          <li><a href="#dinner">バナー</a></li>
+        </ul>
+      
+          <div id="lunch" class="area">
+            <ul>
+              <li>
+              <h3>野菜販売LPページ(架空ページ)</h3>
+              <a href="file:///Users/takumi/Desktop/野菜販売LPページ_files/index.html"><img src="LPページ.vegetable.png" width="483" height="365"></a></li>
+              <li>
+                <h3>My Travel Blog</h3>
+              <a href="file:///Users/takumi/Desktop/Takumi's%20Trip/index.html"><img src="LPページ.profile.png" width="483" height="365"></a></li>
+              <li>
+                <h3>Takumi's Portfolio(こちらのサイト)</h3>
+              <a href="file:///Users/takumi/Desktop/Takumi%C2%B4s%20Portfolio/index.html#"><img src="LPページ.myportfolio.png" width="483" height="365"></a></li>
+            </ul>
+          </div>
+          <div id="drink" class="area">
+            <ul>
+              <li>
+            <h3>家具ECサイト(ドットインストールの物を改良したもの)</h3>
+              <a href="file:///Users/takumi/Desktop/MyECSite/index.html"><img src="ECサイト.png" width="450" height="1508"</a></li>
+            </ul>
+           </div>
+          <div id="dinner" class="area">
+            <ul>
+              <li><img src="バナー.ハンバーガーpsd.jpg" width="250" height="300"></li>
+              <li><img src="buner-cafe.jpg" width="311" height="158"</li>
+          <li><img src="winter.バナー.jpg" width="300" height="250"></li>
+          <li><img src="バナー.転職psd.jpg" width="300" height="250"></li>
+          <li><img src="バナーtrip.jpg" width="300" height="250"></li>
+          <li><img src="ハロウィン.バナー.jpg" width="300" height="250"></li>
+            </ul>
+          </div>
+          </div>
+          </section>
+  <section id="Skill" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>
+        <h3>HTML,CSS</h3>
+        <img src="html.css.icon.png" width="350" height="212">
+        <p>基本的なタグや簡単なWEBサイトを作ることが可能です。しかしまだ浅い知識しか持っていないので勉強中です。</p>
+      </li>
+      <li>
+        <h3>Java Script</h3>
+        <img src="javascript.icon.png" width="350" height="212">
+        <p>jQueryなど、部分的に動かすような基本的なコードは書くことができます。現在猛勉強中です。</p>
+      </li>
+      <li>
+        <h3>PhotoShop,Illustrator</h3>
+        <img src="photoshop.illustrator.icon.png" width="400" height="212">
+        <p>趣味で写真加工や動画編集をしていたため、使い慣れているソフトです。
+        また、WEBデザイナーを目指す上で必要な知識を現在勉強中です。
+        </p>
+      </li>
+    </ul>
+  </section>
+  </main>
+  <footer>
+    <small>(c) Takumi Ezure</small>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-4-1/js/5-4-1.js"></script>
+</body>
+
+</html>
